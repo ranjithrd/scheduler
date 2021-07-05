@@ -17,6 +17,7 @@ function Home() {
 
 	// Set current block
 	function calculateCurrentBlock(d) {
+		console.log(d)
 		let current
 		d.forEach((block) => {
 			const startDate = moment(
