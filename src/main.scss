@@ -1,0 +1,93 @@
+$font: 'Graphik', sans-serif;
+$background: rgb(240, 240, 240);
+$cardshadow: 10px 12px 13px 1px rgba(227, 227, 227, 1);
+
+body {
+	margin: 0;
+	font-family: $font;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $background;
+	padding: 0em 6em 2em;
+	text-align: left;
+}
+
+h1 {
+	font-size: 4.5em;
+}
+
+h2 {
+	font-size: 3.5em;
+}
+
+h3 {
+	font-size: 2.75em;
+	margin-bottom: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.title {
+	font-size: 1.15em;
+	font-weight: 800;
+}
+
+.card {
+	padding: 16px;
+	background-color: white;
+	border-radius: 1em;
+	margin: 1em 0;
+	box-shadow: $cardshadow;
+}
+
+.hero {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.spaced {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+sub {
+	font-size: 1.15em;
+	margin-top: 1em;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.textarea {
+	width: 100%;
+	height: 80%;
+	padding: 1em;
+	textarea {
+		width: 100%;
+		height: 100%;
+		font-family: $font;
+		background-color: white;
+		border: none;
+		box-shadow: $cardshadow;
+		border-radius: 16px;
+		padding: 8px;
+	}
+}

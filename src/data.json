@@ -1,0 +1,64 @@
+{
+	"blocks": [
+		{
+			"name": "School",
+			"start": { "hour": 7, "minute": 0 },
+			"end": { "hour": 11, "minute": 40 },
+			"duration": 280
+		},
+		{
+			"name": "Break",
+			"start": { "hour": 11, "minute": 40 },
+			"end": { "hour": 12, "minute": 15 },
+			"duration": 35
+		},
+		{
+			"name": "Development",
+			"start": { "hour": 12, "minute": 15 },
+			"end": { "hour": 13, "minute": 15 },
+			"duration": 60
+		},
+		{
+			"name": "Homework",
+			"start": { "hour": 13, "minute": 15 },
+			"end": { "hour": 14, "minute": 15 },
+			"duration": 60
+		},
+		{
+			"name": "Lunch",
+			"start": { "hour": 14, "minute": 15 },
+			"end": { "hour": 15, "minute": 0 },
+			"duration": 45
+		},
+		{
+			"name": "Entertainment",
+			"start": { "hour": 15, "minute": 0 },
+			"end": { "hour": 17, "minute": 0 },
+			"duration": 120
+		},
+		{
+			"name": "Studies",
+			"start": { "hour": 17, "minute": 0 },
+			"end": { "hour": 20, "minute": 0 },
+			"duration": 180
+		},
+		{
+			"name": "Dinner",
+			"start": { "hour": 20, "minute": 0 },
+			"end": { "hour": 20, "minute": 30 },
+			"duration": 30
+		},
+		{
+			"name": "Homework",
+			"start": { "hour": 20, "minute": 30 },
+			"end": { "hour": 21, "minute": 30 },
+			"duration": 60
+		},
+		{
+			"name": "Development",
+			"start": { "hour": 21, "minute": 30 },
+			"end": { "hour": 23, "minute": 30 },
+			"duration": 120
+		}
+	]
+}
