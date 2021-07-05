@@ -16,10 +16,10 @@ function Home() {
 	const [textData, setTextData] = useState('')
 
 	// Set current block
-	function calculateCurrentBlock(d) {
-		console.log(d)
+	const calculateCurrentBlock = useCallback(() => {
+		console.log(data)
 		let current
-		d.forEach((block) => {
+		data.forEach((block) => {
 			const startDate = moment(
 				`${block.start.hour}:${block.start.minute}`,
 				'HH:mm'
@@ -38,7 +38,7 @@ function Home() {
 			}
 		})
 		setCurrentBlock(current)
-	}
+	}, [data])
 
 	// On change textarea
 	function onDataChange(d) {
@@ -82,9 +82,10 @@ function Home() {
 		parseData()
 	}, [textData, parseData])
 
+	// Set current when time changes
 	useEffect(() => {
-		calculateCurrentBlock(data)
-	}, [data])
+		calculateCurrentBlock()
+	}, [time, calculateCurrentBlock, data])
 
 	// Handles intervals
 	useEffect(() => {
@@ -92,15 +93,10 @@ function Home() {
 		loadLocalStorage()
 		// Interval logic
 		const timeInterval = setInterval(onInterval, 500)
-		const currentBlockInterval = setInterval(
-			() => calculateCurrentBlock(data),
-			5000
-		)
 		return () => {
 			clearInterval(timeInterval)
-			clearInterval(currentBlockInterval)
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return (
