@@ -91,8 +91,10 @@ function Home() {
 		loadLocalStorage()
 		// Interval logic
 		const timeInterval = setInterval(onInterval, 500)
+		const currentBlockInterval = setInterval(() => calculateCurrentBlock(data), 5000)
 		return () => {
 			clearInterval(timeInterval)
+			clearInterval(currentBlockInterval)
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
