@@ -31,8 +31,8 @@ function Home() {
 			if (blockIsCurrent) {
 				current = {
 					...block,
-					start: startDate.fromNow(),
-					end: endDate.fromNow(),
+					start: startDate.toISOString(),
+					end: endDate.toISOString(),
 				}
 			}
 		})
@@ -91,7 +91,10 @@ function Home() {
 		loadLocalStorage()
 		// Interval logic
 		const timeInterval = setInterval(onInterval, 500)
-		const currentBlockInterval = setInterval(() => calculateCurrentBlock(data), 5000)
+		const currentBlockInterval = setInterval(
+			() => calculateCurrentBlock(data),
+			5000
+		)
 		return () => {
 			clearInterval(timeInterval)
 			clearInterval(currentBlockInterval)
@@ -107,8 +110,20 @@ function Home() {
 					<h3>{moment(time).format('HH:mm:ss')}</h3>
 					{currentBlock !== undefined ? (
 						<sub>
-							{currentBlock.name} started {currentBlock.start} and
-							ends {currentBlock.end}
+							{currentBlock.name} started{' '}
+							{moment
+								.duration(
+									moment(time).diff(
+										moment(currentBlock.start)
+									)
+								)
+								.humanize()}{' '}
+							ago and ends in{' '}
+							{moment
+								.duration(
+									moment(time).diff(moment(currentBlock.end))
+								)
+								.humanize()}
 							<br></br>
 							Lasts{' '}
 							{moment
