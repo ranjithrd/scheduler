@@ -153,6 +153,10 @@ function Home() {
 			})}
 			<div className="hero">
 				<div className="textarea">
+					<div className="spaced">
+						Please make sure that you use the correct format
+						(format's already there in the default schedule) to edit
+					</div>
 					<textarea
 						name="schedule"
 						id="schedule"
