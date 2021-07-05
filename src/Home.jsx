@@ -3,21 +3,11 @@ import moment from 'moment'
 import { process } from './parser'
 
 const DEFAULT_DATA = `
-07:00 AM => 11:40 AM: School
-11:40 AM => 12:15 AM: Break
-12:15 AM => 01:15 PM: Development
-01:15 PM => 02:15 PM: Homework
-02:15 PM => 03:00 PM: Lunch
-03:00 PM => 04:00 PM: Entertainment
-04:00 PM => 05:00 PM: Entertainment
-05:00 PM => 06:00 PM: Studies
-06:00 PM => 07:00 PM: Studies
-07:00 PM => 08:00 PM: Studies
-08:00 PM => 08:30 PM: Dinner
-08:30 PM => 09:30 PM: Homework
-09:30 PM => 10:30 PM: Development
-10:30 PM => 11:30 PM: Development
-	`
+07:00 AM => 12:00 AM: Morning
+12:00 AM => 05:30 PM: Afternoon
+05:30 PM => 09:00 PM: Evening 
+09:00 PM => 07:00 AM: Night
+`
 
 function Home() {
 	const [time, setTime] = useState(new Date())
